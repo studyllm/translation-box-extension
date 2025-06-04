@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    #enableBtn {
+      background-color: #4CAF50;
+      color: white;
+      display: block; /* 默认显示启用按钮 */
+    }
+    #enableBtn:hover {
+      background-color: #45a049;
+    }
+    #disableBtn {
+      background-color: #f44336;
+      color: white;
+      display: none; /* 默认隐藏关闭按钮 */
+    }
+    #disableBtn:hover {
+      background-color: #da190b;
+    }
+    .status {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+    }
+    .pin-instruction {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #e3f2fd;
+      border: 1px solid #2196F3;
+    }
+    .pin-instruction h4 {
+      margin: 0 0 8px 0;
+      color: #1976D2;
+    }
+    .pin-instruction ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .pin-instruction li {
+      margin: 4px 0;
+      color: #333;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="status" id="status">正在检查状态...</div>
+    <button id="enableBtn">启用分屏模式</button>
+    <button id="disableBtn">关闭分屏模式</button>
+    <div class="pin-instruction">
+      <h4>如何固定到工具栏</h4>
+      <ol>
+        <li>点击浏览器右上角的扩展图标</li>
+        <li>在扩展菜单中找到"分屏插件"</li>
+        <li>点击扩展图标右侧的图钉图标</li>
+        <li>图标变成蓝色表示已固定到工具栏</li>
+      </ol>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
